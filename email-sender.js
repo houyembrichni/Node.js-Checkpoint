@@ -1,11 +1,13 @@
 const nodemailer = require("nodemailer");
+require("dotenv").config();
+let password = process.env.password;
 const transporter = nodemailer.createTransport({
   host: "smtp.office365.com",
   port: 587,
   secure: false,
   auth: {
     user: "houyembrchni123@outlook.com",
-    pass: "houyem123456@",
+    pass: password,
   },
 });
 
